@@ -27,7 +27,7 @@
     
     </p>
     <script>
-        document.getElementById("button").onclick = () => setBackgroundColorById("paragraph", "blue");
+        document.getElementById("button").onclick = () => setBackgroundColorById("paragraph", "DodgerBlue");
         
         document.getElementById("alert").onclick = () => alert(document.getElementById("popup-input").value);
         
@@ -37,12 +37,16 @@
         
         document.getElementById("color-background").onclick = () => setBackgroundColorById("body", getValueFromId("input-color"));
 
-        function getValueFromId(id){
-            return document.getElementById(id).value;
-        }
-        function setBackgroundColorById(id, color){
-            document.getElementById(id).style = "background-color: " + color;
-        }
+        const getValueFromId = id => document.getElementById(id).value;
+        
+        const setBackgroundColorById = (id,color) =>document.getElementById(id).style = "background-color: " + color;
+
+        // function getValueFromId(id){
+        //     return document.getElementById(id).value;
+        // }
+        // function setBackgroundColorById(id, color){
+        //     document.getElementById(id).style = "background-color: " + color;
+        // }
 
     </script>
 </body>
